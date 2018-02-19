@@ -21,10 +21,20 @@ export declare class DocumentCookieStore extends toughCookie.Store {
     };
     findCookie(domain: string, path: string, key: string, cb: ICallback<toughCookie.Cookie>): void;
     _findCookie(domain: string, path: string, key: string, cb: ICallback<toughCookie.Cookie>): void;
+    /**
+     * @async
+     * @param {string} domain
+     * @param {string} path
+     * @param {ICallback<Cookie[]>} cb
+     */
     findCookies(domain: string, path: string, cb: ICallback<toughCookie.Cookie[]>): void;
     putCookie(cookie: toughCookie.Cookie, cb: ICallback<toughCookie.Cookie>): void;
     updateCookie(oldCookie: toughCookie.Cookie, newCookie: toughCookie.Cookie, cb: ICallback): void;
     removeCookie(domain: string, path: string, key: string, cb: ICallback): void;
+    /**
+     * @async
+     * @param {ICallback<Cookie[]>} cb
+     */
     getAllCookies(cb: ICallback<toughCookie.Cookie[]>): void;
 }
 /**

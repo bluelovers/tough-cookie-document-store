@@ -25,6 +25,7 @@ store.putCookie(new toughCookie.Cookie({
 });
 
 console.dir(store);
+console.log(store);
 
 store.getAllCookies(function (err, cookies)
 {

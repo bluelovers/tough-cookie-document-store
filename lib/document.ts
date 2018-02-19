@@ -99,6 +99,12 @@ export class DocumentCookieStore extends toughCookie.Store
 		});
 	}
 
+	/**
+	 * @async
+	 * @param {string} domain
+	 * @param {string} path
+	 * @param {ICallback<Cookie[]>} cb
+	 */
 	findCookies(domain: string, path: string, cb: ICallback<toughCookie.Cookie[]>)
 	{
 		let self = this;
@@ -200,6 +206,10 @@ export class DocumentCookieStore extends toughCookie.Store
 		}
 	}
 
+	/**
+	 * @async
+	 * @param {ICallback<Cookie[]>} cb
+	 */
 	getAllCookies(cb: ICallback<toughCookie.Cookie[]>)
 	{
 		let self = this;

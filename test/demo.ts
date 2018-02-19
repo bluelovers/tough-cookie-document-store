@@ -25,4 +25,6 @@ else
 
 let jar = new toughCookie.CookieJar(store);
 
+console.log(jar);
+
 // ... anything u wanna do
