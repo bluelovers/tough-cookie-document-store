@@ -20,7 +20,7 @@ export class DocumentCookieStore extends toughCookie.Store
 
 		this.document = doc;
 
-		if (!this.document || 'cookie' in this.document)
+		if (!this.document || !('cookie' in this.document))
 		{
 			throw new TypeError(`document must have document.cookie`);
 		}
@@ -137,12 +137,15 @@ export class DocumentCookieStore extends toughCookie.Store
 		;
 	}
 
-	putCookie(cookie: toughCookie.Cookie, cb: ICallback)
+	putCookie(cookie: toughCookie.Cookie, cb: ICallback<toughCookie.Cookie>)
 	{
 		try
 		{
 			this.document.cookie = cookie.toString();
-			this.store.putCookie(cookie, cb);
+			this.store.putCookie(cookie, function (err)
+			{
+				cb(err, cookie);
+			});
 		}
 		catch (err)
 		{

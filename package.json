@@ -1,12 +1,25 @@
 {
   "name": "tough-cookie-document-store",
   "version": "1.0.0",
-  "description": "",
+  "description": "tough-cookie store use document.cookie adapter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "cookie",
+    "cookies",
+    "cookiejar",
+    "store",
+    "document",
+    "document.cookie",
+    "adapter",
+    "jsdom",
+    "jsdom-extra",
+    "jar",
+    "request",
+    "tough-cookie"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -16,5 +29,17 @@
   "devDependencies": {
     "@types/tough-cookie": "^2.3.2",
     "jsdom-extra": "^1.2.1"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/tough-cookie-document-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bluelovers/tough-cookie-document-store/issues"
+  },
+  "homepage": "https://github.com/bluelovers/tough-cookie-document-store#readme"
 }
